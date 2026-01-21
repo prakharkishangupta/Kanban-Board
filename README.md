@@ -50,29 +50,31 @@ This project allows users to manage tasks across different stages ("To Do", "In_
 
 ## Project Structure
 Kanban/
-├── Backend/
-│ ├── config/
-│ ├── controllers/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ ├── index.js
-│ └── package.json
-│
-├── Frontend/
-│ ├── src/
-│ │ ├── api/
-│ │ ├── components/
-│ │ ├── context/
-│ │ ├── pages/
-│ │ ├── dnd/
-│ │ └── main.jsx
-│ ├── index.html
-│ ├── tailwind.config.js
-│ ├── vite.config.js
-│ └── package.json
-│
-└── README.md
+  Backend/
+    config/
+    controllers/
+    middleware/
+    models/
+    routes/
+    index.js
+    package.json
+
+
+Frontend/
+    src/
+        api/
+        components/
+        context/
+        pages/
+        dnd/
+        main.jsx
+    index.html
+    tailwind.config.js
+    vite.config.js
+    package.json
+
+
+  README.md
 
 
 ---
@@ -82,6 +84,6 @@ Kanban/
 ### Clone the Repository
 
 ```bash
-git clone 
+git clone https://github.com/prakharkishangupta/Kanban-Board.git
 cd kanban-board
 
