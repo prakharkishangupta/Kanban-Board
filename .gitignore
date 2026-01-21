@@ -1,0 +1,18 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+
+# Build outputs
+dist/
+build/
+
+# Vite cache
+node_modules/.vite/
+
+# OS
+.DS_Store
