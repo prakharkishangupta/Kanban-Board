@@ -10,12 +10,11 @@ import {
 
 const router = express.Router();
 
-router.use(authMiddleware);
 
-router.get("/", getTasks);
-router.post("/", createTask);
-router.put("/:id", updateTask);
-router.delete("/:id", deleteTask);
-router.patch("/drag", dragTask);
 
+router.get("/", authMiddleware, getTasks);
+router.post("/", authMiddleware, createTask);
+router.put("/:id", authMiddleware, updateTask);
+router.delete("/:id", authMiddleware, deleteTask);
+router.patch("/drag", authMiddleware, dragTask);
 export default router;
