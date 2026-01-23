@@ -1,6 +1,9 @@
 import jwt from "jsonwebtoken";
 
 const authMiddleware = (req, res, next) => {
+  if (req.method === "OPTIONS") {
+    return next(); // 🔥 allow preflight
+  }
   const token = req.cookies.token;
   console.log("Auth Middleware Token:", token);
   if (!token) {
