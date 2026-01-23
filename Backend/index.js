@@ -14,6 +14,9 @@ connectDB();
 
 const app = express();
 
+/* 🔥 REQUIRED for Render / HTTPS cookies */
+app.set("trust proxy", 1);
+
 const allowedOrigins = [
   "http://localhost:5173",
   "https://kanban-board-wine-five.vercel.app"
