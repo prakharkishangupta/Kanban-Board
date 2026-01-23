@@ -67,6 +67,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import api from "../api/axios";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -96,7 +97,7 @@ const Signup = () => {
     // data.append('password', password);
     // console.log("data : ", data.name);
     try {
-      const res = await axios.post('http://localhost:8000/api/user/signup', {name, email, password}, {
+      const res = await api.post('/user/signup', {name, email, password}, {
         headers: {
           'Content-Type': 'application/json',
         },
