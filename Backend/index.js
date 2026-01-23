@@ -14,18 +14,20 @@ connectDB();
 
 const app = express();
 
-
-
-app.use(express.json());
-app.use(cookieParser());
 app.use(
   cors({
     origin: process.env.FRONTEND_URL, // frontend port
     credentials: true,
-    // methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    // allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+app.options("*", cors());
+
+
+app.use(express.json());
+app.use(cookieParser());
+
 
 
 
