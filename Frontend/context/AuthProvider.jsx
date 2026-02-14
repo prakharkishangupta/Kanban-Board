@@ -7,7 +7,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({children})=> {
   const [authUser, setAuthUser] = useState(undefined);
     useEffect(()=>{
-      const initialUserState = Cookies.get("jwt") || localStorage.getItem("messanger");
+      const initialUserState = Cookies.get("jwt") || localStorage.getItem("userData");
     
       if(initialUserState){
         const user = JSON.parse(initialUserState);
